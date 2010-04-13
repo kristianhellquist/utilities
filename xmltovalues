@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'nokogiri'
+$*.each do |file|
+  doc = Nokogiri::XML(File.open(file).readlines.join(""))
+  doc.xpath("/").each do |r|
+    r.content.split.each do |w|
+      puts w
+    end
+  end
+end
