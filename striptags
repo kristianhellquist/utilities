@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'rubygems'
 $*.each do |file|
   File.open(file) do |f|
     f.read.gsub(/<[^>]+>/,'').split.compact.each do |w|
